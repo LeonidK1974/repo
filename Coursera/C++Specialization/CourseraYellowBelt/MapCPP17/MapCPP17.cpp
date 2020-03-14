@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+	//
 	// use pairs old style
 	std::cout << "Hello Map wit pairs!\n";
 	map<int, string> digits{ {1, "one"}, {2, "two"} };
