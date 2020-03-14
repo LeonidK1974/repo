@@ -1,0 +1,109 @@
+#include <iostream>
+#include <fstream>
+#include <stdexcept>
+#include <vector>
+
+using namespace std;
+
+// Реализуйте здесь
+// * класс Matrix
+// * оператор ввода для класса Matrix из потока istream
+// * оператор вывода класса Matrix в поток ostream
+// * оператор проверки на равенство двух объектов класса Matrix
+// * оператор сложения двух объектов класса Matrix
+
+class Matrix {
+public:
+    Matrix() {};
+    Matrix(const int& num_rows, const int& num_cols) {
+        if (num_rows < 0 || num_cols < 0) throw out_of_range("out of range");
+        matrix.resize(num_rows);
+        for (auto item : matrix) item.resize(num_cols);
+    };
+    void Reset(int num_rows, int num_cols) {
+        if (num_rows < 0 || num_cols < 0) throw out_of_range("out of range");
+        vector<vector<int>> x;
+        x.resize(num_rows);
+        for (int i = 0; i < num_rows; i++) {
+            x[i].resize(num_cols);
+            for (int j = 0; j < num_cols; j++) x[i][j] = 0;
+        }
+        matrix = x;
+    };
+    int At(int row, int col) const {
+        if (matrix.size() == 0) throw out_of_range("out of range");
+        if (row < 0 || row >= matrix.size() || col < 0 || col >= matrix[0].size()) throw out_of_range("out of range");
+        return matrix[row][col];
+    };
+    int& At(int row, int col) {
+        if (matrix.size() == 0) throw out_of_range("out of range");
+        if (row < 0 || row >= matrix.size() || col < 0 || col >= matrix[0].size()) throw out_of_range("out of range");
+        return matrix[row][col];
+    };
+    int GetNumRows() const {
+        if (matrix.size() == 0) return 0;
+        return matrix[0].size();
+    };
+    int GetNumColumns() const {
+        return matrix.size();
+    }
+    vector<vector<int>> matrix;
+};
+
+istream& operator>>(istream& stream, Matrix& matr) {
+    int m, n, x;
+    stream >> m >> n;
+    for (int i = 0; i < m; i++) {
+        vector<int> y;
+        for (int j = 0; j < n; j++) {
+            stream >> x;
+            y.push_back(x);
+        }
+        matr.matrix.push_back(y);
+    }
+    return stream;
+};
+
+ostream& operator<<(ostream& stream, const Matrix& matr) {
+    stream << matr.matrix.size() << " " << matr.matrix[0].size() << endl;
+    for (int i = 0; i < matr.matrix.size(); i++) {
+        for (int j = 0; j < matr.matrix[i].size(); j++) {
+            if (j < matr.matrix[i].size()-1) stream << matr.matrix[i][j] << " ";
+            else stream << matr.matrix[i][j];
+        }
+        stream << endl;
+    }
+    return stream;
+};
+
+Matrix operator+(const Matrix& lhs, const Matrix& rhs) {
+    if (lhs.matrix.size() != rhs.matrix.size() || lhs.matrix[0].size() != rhs.matrix[0].size()) throw invalid_argument("invalid argument");
+    Matrix res;
+    for (int i = 0; i < lhs.matrix.size(); i++) {
+        vector<int> y;
+        for (int j = 0; j < lhs.matrix[i].size(); j++) {
+            y.push_back(lhs.matrix[i][j] + rhs.matrix[i][j]);
+        }
+        res.matrix.push_back(y);
+    }
+    return res;
+};
+
+bool operator==(const Matrix& lhs, const Matrix& rhs) {
+    if (lhs.matrix.size() != rhs.matrix.size() || lhs.matrix[0].size() != rhs.matrix[0].size()) return false;
+    for (int i = 0; i < lhs.matrix.size(); i++) {
+        for (int j = 0; j < lhs.matrix[i].size(); j++) {
+            if (lhs.matrix[i][j] != rhs.matrix[i][j]) return false;
+        }
+    }
+    return true;
+};
+
+int main() {
+    Matrix one;
+
+    cin >> one;
+    one.Reset(3, 3);
+    cout << one;
+    return 0;
+}

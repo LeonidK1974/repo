@@ -1,0 +1,166 @@
+#include <iostream>
+#include <fstream>
+#include <stdexcept>
+#include <vector>
+
+using namespace std;
+class Matrix
+{
+public:
+    Matrix() {}
+    Matrix(int num_rows, int num_cols)
+    {
+        if (num_rows >= 0 && num_cols >= 0) {
+            if (num_rows == 0 || num_cols == 0) {
+            } else {
+                createZero(num_rows, num_cols);
+            }
+        } else {
+            throw out_of_range("Negative number of col and row");
+        }
+    }
+
+    void Reset(int newNumRow, int newNumCol)
+    {
+        if (newNumRow >= 0 && newNumCol >= 0) {
+            clearNum();
+            if (newNumRow == 0 || newNumCol == 0) {
+                m_col = 0;
+                m_row = 0;
+            } else {
+                createZero(newNumRow, newNumCol);
+            }
+        } else {
+            throw out_of_range("Negative number of col and row");
+        }
+    }
+
+    bool isEmpty() const
+    {
+        if (m_row == 0)
+            return true;
+        else
+            return false;
+    }
+
+    int At(int row, int col) const
+    {
+        if (row >= 0 && col >= 0 && row < m_row && col < m_col) {
+            return num[row][col];
+        } else
+            throw out_of_range("Negative number of col and row");
+    }
+	
+	int &At(int row, int col)
+    {
+        if (row >= 0 && col >= 0 && row < m_row && col < m_col) {
+            return num[row][col];
+        } else
+            throw out_of_range("Negative number of col and row");
+    }
+
+    int GetNumColumns() const { return m_col; }
+    int GetNumRows() const { return m_row; }
+
+    Matrix &operator+(const Matrix &other) const
+    {
+        if (m_col == other.m_col && m_row == other.m_row) {
+            Matrix *temp = new Matrix(m_row, m_col);
+            for (int i = 0; i < m_row; i++) {
+                for (int j = 0; j < m_col; j++) {
+                    temp->num[i][j] = num[i][j] + other.num[i][j];
+                }
+            }
+        } else
+            throw invalid_argument("Attempt to add matrices of different sizes");
+    }
+
+    bool operator==(const Matrix &other) const
+    {
+        if (m_col == other.m_col && m_row == other.m_row) {
+            for (int i = 0; i < m_row; i++) {
+                for (int j = 0; j < m_col; j++) {
+                    if (num[i][j] != other.num[i][j])
+                        return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    friend ostream &operator<<(ostream &out, const Matrix &matrix)
+    {
+        // out << "Matrix " << matrix.m_col << "x" << matrix.m_row << endl;
+        out << matrix.m_row << " " << matrix.m_col << endl;
+
+        //для пустых матриц
+        if (matrix.isEmpty()) {
+            out << endl;
+        }
+
+        //для непустых матриц
+        for (int i = 0; i < matrix.m_row; i++) {
+            for (int j = 0; j < matrix.m_col; j++) {
+                out << matrix.num[i][j] << " ";
+            }
+            out << endl;
+        }
+        return out;
+    }
+	
+	friend istream &operator>>(istream &in, Matrix &matrix)
+    {
+        int cols, rows;
+        in >> rows;
+        in >> cols;
+        matrix.Reset(rows, cols);
+
+        for (int i = 0; i < matrix.m_row; i++) {
+            for (int j = 0; j < matrix.m_col; j++) {
+                in >> matrix.num[i][j];
+            }
+        }
+        return in;
+    }
+
+protected:
+    void createZero(int num_rows, int num_cols)
+    {
+        m_row = num_rows;
+        m_col = num_cols;
+        for (int i = 0; i < m_row; i++) {
+            num.push_back(vector<int>(m_col));
+            for (int j = 0; j < m_col; j++) {
+                num[i][j] = 0;
+            }
+        }
+    }
+    void clearNum()
+    {
+        if (num.size() > 0) {
+            for (int i = 0; i < m_row; i++) {
+                num[i].clear();
+            }
+            num.clear();
+            m_col = 0;
+            m_row = 0;
+        }
+    }
+    void test() {}
+
+private:
+    int m_row { 0 };
+    int m_col { 0 };
+    vector<vector<int>> num;
+};
+
+int main()
+{
+    Matrix one;
+    Matrix two;
+
+    cin >> one >> two;
+    cout << one + two << endl;
+    return 0;
+}
