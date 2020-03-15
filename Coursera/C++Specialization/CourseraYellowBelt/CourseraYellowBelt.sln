@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestFunctionIsPolindrom", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IsPalindrome", "IsPalindrome\IsPalindrome.vcxproj", "{DDC56E3D-D067-47E1-AA30-560E0D528FF1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sum_Reverse_Sort", "Sum_Reverse_Sort\Sum_Reverse_Sort.vcxproj", "{301B14B0-7C67-49F7-8785-72C6908BD6E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -235,6 +237,14 @@ Global
 		{DDC56E3D-D067-47E1-AA30-560E0D528FF1}.Release|x64.Build.0 = Release|x64
 		{DDC56E3D-D067-47E1-AA30-560E0D528FF1}.Release|x86.ActiveCfg = Release|Win32
 		{DDC56E3D-D067-47E1-AA30-560E0D528FF1}.Release|x86.Build.0 = Release|Win32
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Debug|x64.ActiveCfg = Debug|x64
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Debug|x64.Build.0 = Debug|x64
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Debug|x86.Build.0 = Debug|Win32
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Release|x64.ActiveCfg = Release|x64
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Release|x64.Build.0 = Release|x64
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Release|x86.ActiveCfg = Release|Win32
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +269,7 @@ Global
 		{1283C44C-51A0-429C-92E5-FC260CECFA67} = {C5DD68A3-175D-4467-8187-C1CC4F3DCE24}
 		{C1E8BE5D-AE38-4BEF-9EEF-E22825770736} = {C5DD68A3-175D-4467-8187-C1CC4F3DCE24}
 		{DAA4AA34-9B3E-46E1-BD3F-05707A69D6A4} = {C5DD68A3-175D-4467-8187-C1CC4F3DCE24}
+		{301B14B0-7C67-49F7-8785-72C6908BD6E9} = {C5DD68A3-175D-4467-8187-C1CC4F3DCE24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {357439C1-BEED-410A-BF27-FDCAC142267B}
