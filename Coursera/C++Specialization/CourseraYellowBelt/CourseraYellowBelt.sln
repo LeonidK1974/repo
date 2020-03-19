@@ -73,6 +73,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindGreaterElementAuthor", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SplitIntoWords", "SplitIntoWords\SplitIntoWords.vcxproj", "{ED9A2210-C7A4-4132-B1F5-4CFA02034B96}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IteratorsAndReverseIterator", "IteratorsAndReverseIterator\IteratorsAndReverseIterator.vcxproj", "{BD8DB8EA-1467-442A-B5B2-848D223501AB}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_iterator_usage", "Test_iterator_usage\Test_iterator_usage.vcxproj", "{20329773-5949-42A5-B219-63055F2601BD}"
 EndProject
 Global
@@ -331,6 +333,14 @@ Global
 		{ED9A2210-C7A4-4132-B1F5-4CFA02034B96}.Release|x64.Build.0 = Release|x64
 		{ED9A2210-C7A4-4132-B1F5-4CFA02034B96}.Release|x86.ActiveCfg = Release|Win32
 		{ED9A2210-C7A4-4132-B1F5-4CFA02034B96}.Release|x86.Build.0 = Release|Win32
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Debug|x64.ActiveCfg = Debug|x64
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Debug|x64.Build.0 = Debug|x64
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Debug|x86.Build.0 = Debug|Win32
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Release|x64.ActiveCfg = Release|x64
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Release|x64.Build.0 = Release|x64
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Release|x86.ActiveCfg = Release|Win32
+		{BD8DB8EA-1467-442A-B5B2-848D223501AB}.Release|x86.Build.0 = Release|Win32
 		{20329773-5949-42A5-B219-63055F2601BD}.Debug|x64.ActiveCfg = Debug|x64
 		{20329773-5949-42A5-B219-63055F2601BD}.Debug|x64.Build.0 = Debug|x64
 		{20329773-5949-42A5-B219-63055F2601BD}.Debug|x86.ActiveCfg = Debug|Win32
