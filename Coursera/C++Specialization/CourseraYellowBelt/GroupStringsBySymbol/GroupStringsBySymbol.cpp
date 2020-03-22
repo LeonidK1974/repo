@@ -9,19 +9,20 @@
 
 using namespace std;
 
+template<class Iter, class T, class Proj>
+std::pair<Iter, Iter> my_equal_range(Iter first, Iter last, const T& value, Proj proj) {
+	auto b = std::partition_point(first, last, [&](const auto& s) { return proj(s) < value; });
+	auto e = std::partition_point(b, last, [&](const auto& s) { return !(value < proj(s)); });
+	return { b, e };
+}
+
 template <typename RandomIt>
 pair<RandomIt, RandomIt> FindStartsWith(
 	RandomIt range_begin, RandomIt range_end,
 	char prefix)
 {
-	RandomIt iter_beg, iter_end;
-	return make_pair(iter_beg, iter_end);
-	//return make_pair(iter_beg, iter_end) = equal_range(range_begin, range_end, 
-	//	prefix,
-	//	[](const string& city)
-	//	{
-	//		return city[0] != 'C';
-	//	});;
+	return my_equal_range(range_begin, range_end, prefix,
+		[](const auto& s) { return s.front(); });
 }
 
 int main()
