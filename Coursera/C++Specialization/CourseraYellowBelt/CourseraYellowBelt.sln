@@ -105,6 +105,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InheritanceManual", "Inheri
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParseArithmeticExpression", "ParseArithmeticExpression\ParseArithmeticExpression.vcxproj", "{77654025-C9A9-4D56-ABE2-44CF8B5A10CB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SendNotifications", "SendNotifications\SendNotifications.vcxproj", "{B3880AB7-83BA-409D-BFE3-E35747D5DD21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -481,6 +483,14 @@ Global
 		{77654025-C9A9-4D56-ABE2-44CF8B5A10CB}.Release|x64.Build.0 = Release|x64
 		{77654025-C9A9-4D56-ABE2-44CF8B5A10CB}.Release|x86.ActiveCfg = Release|Win32
 		{77654025-C9A9-4D56-ABE2-44CF8B5A10CB}.Release|x86.Build.0 = Release|Win32
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Debug|x64.ActiveCfg = Debug|x64
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Debug|x64.Build.0 = Debug|x64
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Debug|x86.ActiveCfg = Debug|Win32
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Debug|x86.Build.0 = Debug|Win32
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Release|x64.ActiveCfg = Release|x64
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Release|x64.Build.0 = Release|x64
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Release|x86.ActiveCfg = Release|Win32
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -525,6 +535,7 @@ Global
 		{113EE514-F9A3-4351-87A1-60F618BAD941} = {EB9F3230-16F8-45FF-B745-26D3CB35FFFC}
 		{79FF5989-D0ED-4890-AA6D-F59511E5935C} = {3B172635-5BD8-44C5-B906-58662D222D08}
 		{77654025-C9A9-4D56-ABE2-44CF8B5A10CB} = {3B172635-5BD8-44C5-B906-58662D222D08}
+		{B3880AB7-83BA-409D-BFE3-E35747D5DD21} = {3B172635-5BD8-44C5-B906-58662D222D08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {357439C1-BEED-410A-BF27-FDCAC142267B}
