@@ -7,76 +7,82 @@
 
 using namespace std;
 
-struct Person
+class Person
 {
-	Person(const string& j =" Person") : Job(j){}
-	virtual void Walk(const string& destination) const {};
-	const string Job = "Person";
+public:
+	Person(const string& name, const string occupation) : name_(name), occupation_(occupation){}
+	
+	virtual void Walk(const string& destination) const
+	{
+		cout << GetOccupation() << ": " << GetName() << " walks to: " << destination << endl;
+	};
+
+	string GetName() const
+	{
+		return name_;
+	}
+
+	string GetOccupation() const
+	{
+		return occupation_;
+	}
+
+	string Log() const
+	{
+		return GetOccupation() + ": " + GetName();
+	}
+
+protected:
+	const string name_;
+	const string occupation_;
 };
 
 class Student : public Person {
 public:	
-	Student(const string& name, const string& favoriteSong) : Name(name), FavoriteSong(favoriteSong) {
+	Student(const string& name, const string& favoriteSong) : Person(name,"Student"), favoriteSong_(favoriteSong) {
 	}
 
 	void Learn() const {
-		cout << "Student: " << Name << " learns" << endl;
+		cout << Log() << " learns" << endl;
 	}
 
 	void Walk(const string& destination) const override{
-		cout << "Student: " << Name << " walks to: " << destination << endl;
-		cout << "Student: " << Name << " sings a song: " << FavoriteSong << endl;
+		Person::Walk(destination);
+		SingSong();
 	}
 
 	void SingSong() const {
-		cout << "Student: " << Name << " sings a song: " << FavoriteSong << endl;
+		cout << Log() << " sings a song: " << favoriteSong_ << endl;
 	}
 
-	string Job = "Student";
-	string Name;
-	string FavoriteSong;
+private:
+	const string favoriteSong_;
 };
 
 
 class Teacher : public Person {
 public:
 	
-	Teacher(const string& name,const string& subject) : Name(name), Subject(subject) {
+	Teacher(const string& name,const string& subject) : Person(name, "Teacher"), subject_(subject) {
 	}
 
 	void Teach() const {
-		cout << "Teacher: " << Name << " teaches: " << Subject << endl;
+		cout << Log()<< " teaches: " << subject_ << endl;
 	}
 
-	void Walk(const string& destination) const override{
-		cout << "Teacher: " << Name << " walks to: " << destination << endl;
-	}
-
-	string Job = "Teacher";
-	string Name;
-	string Subject;
+private:
+	const string subject_;
 };
 
 
 class Policeman : Person {
-public:
-	Policeman() : Person("Policeman"){}
-	
-	Policeman(const string& name) : Name(name) {
+public:	
+	Policeman(const string& name) : Person(name, "Policeman") {
 	}
 
-	template <class T> 
-	void Check(const T& t) const {
-		cout << "Policeman: " << Name << " checks " << t.Job << ". " << t.Job << "'s name is: " << t.Name << endl;
+	void Check(const Person& p) const {
+		cout << Log() << " checks " << p.GetOccupation() << ". " << p.GetOccupation() << "'s name is: " << p.GetName() << endl;
 	}
-
-
-	void Walk(const string& destination) const override{
-		cout << "Policeman: " << Name << " walks to: " << destination << endl;
-	}
-
-	string Job = "Policeman";
-	string Name;
 };
 
 void VisitPlaces(const Person& human, const vector<string>& places)
