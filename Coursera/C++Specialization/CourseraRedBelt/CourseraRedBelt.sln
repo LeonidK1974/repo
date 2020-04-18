@@ -29,6 +29,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Paginator", "Paginator\Pagi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassTemplate", "ClassTemplate\ClassTemplate.vcxproj", "{88BFDEAF-8469-4527-946F-C1BC4A253537}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week2", "Week2", "{6D5FAE86-32B4-4EFE-81AD-E19FE4FE3DEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort_students", "Sort_students\Sort_students.vcxproj", "{115CA07D-11CE-4EDF-822C-F9117E75C5FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -133,6 +137,14 @@ Global
 		{88BFDEAF-8469-4527-946F-C1BC4A253537}.Release|x64.Build.0 = Release|x64
 		{88BFDEAF-8469-4527-946F-C1BC4A253537}.Release|x86.ActiveCfg = Release|Win32
 		{88BFDEAF-8469-4527-946F-C1BC4A253537}.Release|x86.Build.0 = Release|Win32
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Debug|x64.ActiveCfg = Debug|x64
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Debug|x64.Build.0 = Debug|x64
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Debug|x86.ActiveCfg = Debug|Win32
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Debug|x86.Build.0 = Debug|Win32
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Release|x64.ActiveCfg = Release|x64
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Release|x64.Build.0 = Release|x64
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Release|x86.ActiveCfg = Release|Win32
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +159,7 @@ Global
 		{ACBF666E-2CCA-4DEE-9144-3B35FD1AA487} = {87667776-165A-4633-9684-1173EB301907}
 		{F8BE5F5C-DB4B-434F-9F3A-72ABEE79D839} = {87667776-165A-4633-9684-1173EB301907}
 		{BEB85CEC-8C53-440A-A05A-9043D0610907} = {87667776-165A-4633-9684-1173EB301907}
+		{115CA07D-11CE-4EDF-822C-F9117E75C5FD} = {6D5FAE86-32B4-4EFE-81AD-E19FE4FE3DEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE199877-B9DC-463C-9BD1-96634082C837}
