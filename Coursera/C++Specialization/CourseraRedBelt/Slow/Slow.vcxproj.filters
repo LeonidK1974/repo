@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Slow.cpp">
+    <ClCompile Include="faster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
