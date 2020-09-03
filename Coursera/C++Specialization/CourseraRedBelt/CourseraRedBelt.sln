@@ -121,6 +121,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MutexAndLockGuard", "MutexA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Concurrent_map_author", "Concurrent_map_author\Concurrent_map_author.vcxproj", "{B0FBCD8D-5FC7-46DD-B039-22BB96C8E118}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5_1_1", "5_1_1\5_1_1.vcxproj", "{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -561,6 +563,14 @@ Global
 		{B0FBCD8D-5FC7-46DD-B039-22BB96C8E118}.Release|x64.Build.0 = Release|x64
 		{B0FBCD8D-5FC7-46DD-B039-22BB96C8E118}.Release|x86.ActiveCfg = Release|Win32
 		{B0FBCD8D-5FC7-46DD-B039-22BB96C8E118}.Release|x86.Build.0 = Release|Win32
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Debug|x64.ActiveCfg = Debug|x64
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Debug|x64.Build.0 = Debug|x64
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Debug|x86.ActiveCfg = Debug|Win32
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Debug|x86.Build.0 = Debug|Win32
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Release|x64.ActiveCfg = Release|x64
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Release|x64.Build.0 = Release|x64
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Release|x86.ActiveCfg = Release|Win32
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -618,6 +628,7 @@ Global
 		{821DA05A-A41C-4451-B73E-98F74D9D1393} = {25512FB5-3998-4861-B642-64899FA7998C}
 		{8BFC5B7D-DC47-4154-A365-C092CCC59D7D} = {25512FB5-3998-4861-B642-64899FA7998C}
 		{B0FBCD8D-5FC7-46DD-B039-22BB96C8E118} = {25512FB5-3998-4861-B642-64899FA7998C}
+		{B4A5D0F5-0E16-4683-95B6-5E3CCF348DE6} = {25512FB5-3998-4861-B642-64899FA7998C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE199877-B9DC-463C-9BD1-96634082C837}
