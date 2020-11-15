@@ -18,7 +18,10 @@ int main()
 		LOG_DURATION("fill collection");
 		string text;
 		while (fs >> text) {
-			++freqs[text];
+			if (text != "." && text != ",")
+			{
+				++freqs[text];
+			}			
 		}
 	}
 	
@@ -29,7 +32,7 @@ int main()
 	cout << endl;
 */
 
-	LOG_DURATION("fill collection");
+	LOG_DURATION("copy and sort collection");
 	vector<pair<string, int>> words(freqs.begin(), freqs.end());
 	sort(words.begin(), words.end(), [](const auto& l, const auto& r) {
 		return l.second > r.second;
